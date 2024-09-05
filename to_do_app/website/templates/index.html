@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="space.jpg">
+  
 
 
 </head>
@@ -14,13 +14,18 @@
 <body>
     <div>
         <h1>To Do List</h1>
+        {% if message %}
+        {{message}}
+        {% endif %}
 
-        <form action="/add" method="post">
+        <form action="/add" method="POST">
             <div>
-                <label>Todo task</label>
-                <input type="text" name="task" placeholder="Enter a Task">
-                <button type="submit">Add a Task</button>
-            </div>
+                <label for "add">Todo task</label>
+                <input type="text" id = "Task" placeholder="New Task " required>
+                <button type="submit"> New Task </button>
+             </div>  
+             <br>
+
         </form>
         <br>
 
@@ -44,8 +49,13 @@
 </body>
 <br>
     <h3>Please leave a comment in the box</h3>
-<input type= "text" name="comment" placeholder="Comment ">
-<button type="submit">Leave Comment here</button> 
+
+<div>   
+    <label  for "comment" >Leave comment here </label>  
+    <input type= "text" id="comment" placeholder="Comment ">
+    <button type="submit">Leave Comment here</button>
+    <img class=" image" src="/static/images/download.jpeg"> 
+</div> 
 
 <br>
 
